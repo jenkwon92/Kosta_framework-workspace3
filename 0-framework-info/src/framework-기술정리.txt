@@ -209,3 +209,8 @@ TRACE(가장 낮은 로그레벨)
 		-> document ready 는 DOM 이 load 되는 시점에 호출 
 		  ( 이미지나 동영상 같은 자원들이 로드되지 않아도  document 객체가 준비되면 실행)
 		  jquery document ready 가 되는 시점에 익명함수 내에 현 페이지에서 동작될 이벤트에 대한 동작을 바인딩(등록)		
+		  
+  	@Transactional : AOP 기반 선언적 방식의 트랜잭션 처리 
+	   						컨트롤러에서 Spring Container 로부터 MemberServiceImpl 객체가 아닌
+ 							AOP Proxy 객체가 DI 되어 해당 메서드에서 문제 발생시 rollback
+  							정상적으로 수행되면 commit 되게 한다
