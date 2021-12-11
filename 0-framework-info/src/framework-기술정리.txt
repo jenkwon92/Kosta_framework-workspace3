@@ -119,6 +119,13 @@ TRACE(가장 낮은 로그레벨)
 	@Repository : 영속성 계층에서 사용 (Data Access Logic 을 정의한 객체에 적용)
 	@Service : 비즈니스 계층에서 사용 (Service or Business Logic 을 정의한 객체에 적용)
 	@Controller : 프레젠테이션 계층의 컨트롤러에서 사용 (MVC 의 Controller Logic 을 정의한 객체에 적용)
+	@RestController //REST 서비스를 위한 컨트롤러 어노테이션 @Controller + @ResponseBody
+	
+	@Bean : bean 생성을 위한 어노테이션 : 외부라이브러리를 통해 bean 생성하고자 할 때 사용하는 어노테이션
+	
+	
+	
+	
 	
 	DI (Dependency Injection) 계열 어노테이션
 	@Autowired : 의존대상 bean 을 타입으로 검색해 주입 (생성자, 필드, setter)
@@ -128,6 +135,7 @@ TRACE(가장 낮은 로그레벨)
 	@Resource : 의존대상 bean 을 타입으로 검색해 주입(필드와 setter)
 						-> 동일한 인터페이스를 여러개의 클래스가 구현하는 상태에서는
 						@Resource + @Qualified("bean id") name 속성을 추가적으로 명시한다
+	
 	
 	spring-config.xml 에서 IOC,DI,DL 에 대한 설정
 	<context : component-scan base-package="org.kosta">
@@ -214,3 +222,21 @@ TRACE(가장 낮은 로그레벨)
 	   						컨트롤러에서 Spring Container 로부터 MemberServiceImpl 객체가 아닌
  							AOP Proxy 객체가 DI 되어 해당 메서드에서 문제 발생시 rollback
   							정상적으로 수행되면 commit 되게 한다
+
+
+  							
+REST(REpresentational State Transfer) : 
+분산 환경에서 시스템 간의 통신을 위한 소프트웨어 아키텍쳐 
+
+분산 환경에서 다양한 시스템 간의 통신을 위해 자원에 식별자 부여하고 자원정보를 표준화된 HTTP Method로 제어하는 소프트웨어 아키텍쳐  
+
+식별자(URI)가 부여된 자원정보를 표준화된 HTTP 메서드로 제어한다
+HTTP GET,POST,PUT,DELETE METHOD를 이용한다   
+
+@RestController // @Controller + @ResponseBody
+
+
+
+
+
+
